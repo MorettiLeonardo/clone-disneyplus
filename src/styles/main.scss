@@ -1,5 +1,53 @@
-$bgColor: #000;
+@use 'variables.scss';
+@use 'hero';
+
+* {
+    margin: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
 body {
-    background-color: $bgColor;
+    background-color: variables.$bgColor;
+}
+
+@mixin text($fontsize: 16px) {
+    font-size: $fontsize;
+    line-height: $fontsize + 10px;
+    color: variables.$mainTextColor;
+}
+
+@mixin title($fontsize: 40px) {
+    @include text($fontsize);
+    color: variables.$secondaryTextColor;
+}
+
+.text--big {
+    @include text(18px);
+}
+
+.text {
+    @include text;
+}
+
+.text--small {
+    @include text(12px);
+}
+
+.link-text {
+    @include text(18px);
+    color: variables.$secondaryTextColor;
+    text-decoration: underline;
+}
+
+.title--big {
+    @include title(44px);
+}
+
+.title {
+    @include title;
+}
+
+.title--small {
+    @include title(28px);
 }
