@@ -1,5 +1,6 @@
 @use 'variables.scss';
 @use 'hero';
+@use 'shows';
 
 @font-face {
     font-family: Avenir;
@@ -17,11 +18,11 @@
     margin: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: Avenir, sans-serif;
 }
 
 body {
     background-color: variables.$bgColor;
-    font-family: Avenir, sans-serif;
 }
 
 @mixin text($fontsize: 16px) {
