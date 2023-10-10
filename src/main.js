@@ -10,10 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (currentPosition <= heightHero) {
             hideHeaderElements()
-            console.log("oculta header")
         } else {
             showHeaderElements()
-            console.log("Mostra header")
         }
     })
 
